@@ -119,8 +119,8 @@ final_data["Final Grade"]=pd.Categorical(letter_grades,categories=grades.values(
 for section,table in final_data.groupby("Section"):
     section_file=DATA_FOLDER/f"Section {section} Grades.csv"
     num_students=table.shape[0]
-    #print(f"In Section {section} there are {num_students} students saved to "
-        #f"file {section_file}.")
+    print(f"In Section {section} there are {num_students} students saved to "
+        f"file {section_file}.")
     table.sort_values(by=["Last Name","First Name"]).to_csv(section_file)
 
 grade_counts= final_data["Final Grade"].value_counts()
