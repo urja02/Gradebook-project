@@ -7,7 +7,8 @@ Using pandas, this script combines data from the:
 * Quiz grades
 
 to calculate final grades for a class.
-"""
+""" #demo
+
 import pandas as pd
 from pathlib import Path
 import re
